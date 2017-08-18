@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ArchivosControllerTest < ActionDispatch::IntegrationTest
-  test "should get subir_archivos" do
-    get archivos_subir_archivos_url
+  test "should get cargar_archivos" do
+    get archivos_cargar_archivos_url
     assert_response :success
   end
 

@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-root "archivos#listar_archivos"
+  resources :contactos
 
-get  "archivos/subir_archivos"
-post "archivos/subir_archivos"
-get  "archivos/listar_archivos"
-post "archivos/borrar_archivos"
+#  root "archivos#listar_archivos"
+  root "contactos#index"
+
+  get  "archivos/cargar_archivos"
+  post "archivos/cargar_archivos"
+  get  "archivos/listar_archivos"
+  post "archivos/borrar_archivos"
 
 end

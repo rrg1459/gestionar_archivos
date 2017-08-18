@@ -1,0 +1,19 @@
+<h2> Cargar Archivo </h2>
+<%= form_tag({:controller => "archivos", :action => "cargar_archivos"}, :method => "post", :multipart => true) do %>
+   <%= file_field_tag "archivo" %>
+   <br>
+   <br>
+   <%= submit_tag "Cargar Archivo" %>
+<% end %>
+
+<% if @en_blanco %>
+  <div>
+     <p> Debe carga un archivo</p>
+  </div>
+<% end %>
+<% if @formato_erroneo %>
+  <div>
+     <p> El formato ingresado es incorrecto. Sólo puede subir archivos tipo .csv, .xls, y .xlsx </p>
+  </div>
+<% end %>
+<p> <%= link_to "Volver a la lista de archivos", :controller => "archivos", :action => "listar_archivos" %> </p>
