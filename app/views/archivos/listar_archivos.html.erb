@@ -8,15 +8,16 @@
 <!-- Enlace a la página de subir archivos -->
 <p> <%= link_to "Subir archivo", :controller => "archivos", :action => "subir_archivos" %> </p>
 <!-- Lista de archivos subidos -->
-<ul>
+<table>
    <% @archivos.each do |a| %>
    <% if a == "." or a == ".." then next end; %>
-   <li>
-      <strong> <%= a %> </strong> | 
-      <a target="_blank" href="/archivos/<%= a %>"> Ver archivo </a> | 
-      <%= link_to "Borrar archivo", {:controller => "archivos", :action => "borrar_archivos", :archivo_a_borrar => a}, {:method => "post", :confirm => "Seguro?"} %>
-   </li>
+   <tr>
+      <td><strong> <a target="_blank" href="/archivos/<%= a %>"><%= a %></a></strong></td> 
+      <td style="text-align: center" ><%= button_to 'Borrar',  {:controller => "archivos", :action => "borrar_archivos", :archivo_a_borrar => a}, {:method => "post", data: { confirm: "Esta seguro de querer borrar el archivo #{a}???"}} %></td>
+
+
+   </tr>
    <% end %>
-</ul>
+</table>
 <!-- Acá se guarda el nombre del archivo antes de que el formularo sea enviado-->
 <hr />
