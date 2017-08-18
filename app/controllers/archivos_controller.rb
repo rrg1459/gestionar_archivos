@@ -12,6 +12,7 @@ class ArchivosController < ApplicationController
     if File.exist?(ruta_al_archivo)
           puts '...............................'
           puts archivo.original_filename
+          nombre_archivo = archivo.original_filename
           puts '...............................'
     @archivo_existe  = true;
 
@@ -26,9 +27,10 @@ class ArchivosController < ApplicationController
        #Directorio donde se va a guardar.
        directorio = Ruta_directorio_archivos;
        #Extensión del archivo.
-       extension = nombre.slice(nombre.rindex("."), nombre.length).downcase;
-       #Verifica que el archivo tenga una extensión correcta.
-       if extension == ".txt" or extension == ".pdf" or extension == ".doc" or extension == ".docx"
+
+       extension = nombre.split(".")
+
+       if extension == "txt" or extension == "pdf" or extension == "doc" or extension == "docx"
           #Ruta del archivo.
           path = File.join(directorio, nombre);
           #Crear en el archivo en el directorio. Guardamos el resultado en una variable, será true si el archivo se ha guardado correctamente.
@@ -42,6 +44,7 @@ class ArchivosController < ApplicationController
           #Redirige al controlador "archivos", a la acción "lista_archivos" y con la variable de tipo GET "subir_archivos" con el valor "ok" si se subió el archivo y "error" si no se pudo.
           redirect_to :controller => "archivos", :action => "listar_archivos", :subir_archivo => subir_archivo;
        else
+        puts "formato erroneo"
           @formato_erroneo = true;
        end
     end
@@ -67,6 +70,9 @@ class ArchivosController < ApplicationController
           @mensaje = "El archivo no ha podido ser eliminado.";
        end
     end
+
+
+
  end
  def borrar_archivos
     #Recuperamos el nombre del archivo.
