@@ -21,12 +21,23 @@ class ArchivosController < ApplicationController
             #Directorio donde se va a guardar.
             directorio = Ruta_directorio_archivos;
             #Extensión del archivo.
-            extension = nombre.split(".")
-            if extension.last == "csv" or extension.last == "xls" or extension.last == "xlsx"
+            extension = File.extname(archivo.original_filename)
+            if extension == ".csv" or extension == ".xls" or extension == ".xlsx"
                #Ruta del archivo.
                path = File.join(directorio, nombre);
                #Crear en el archivo en el directorio. Guardamos el resultado en una variable, será true si el archivo se ha guardado correctamente.
                resultado = File.open(path, "wb") { |f| f.write(archivo.read) };
+  
+
+puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    puts params[:archivo]
+puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        Contacto.import(params[:archivo])
+
+
+
+
+
                #Verifica si el archivo se subió correctamente.
                if resultado
                   subir_archivo = "ok";
