@@ -26,18 +26,12 @@ class ArchivosController < ApplicationController
                #Ruta del archivo.
                path = File.join(directorio, nombre);
                #Crear en el archivo en el directorio. Guardamos el resultado en una variable, será true si el archivo se ha guardado correctamente.
+
+puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+               Contacto.import(params[:archivo])
+puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
                resultado = File.open(path, "wb") { |f| f.write(archivo.read) };
-  
-
-puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    puts params[:archivo]
-puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-        Contacto.import(params[:archivo])
-
-
-
-
-
                #Verifica si el archivo se subió correctamente.
                if resultado
                   subir_archivo = "ok";
