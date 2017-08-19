@@ -10,10 +10,15 @@ class ArchivosController < ApplicationController
          @en_blanco = true;
        else   
          ruta_al_archivo = Ruta_directorio_archivos + archivo.original_filename;
+
+
+
          puts ruta_al_archivo
+
+
+
          #Verificamos que el archivo exista para mp subirlo.
          if File.exist?(ruta_al_archivo)
-            puts archivo.original_filename
             subir_archivo  = "existe";
          else
             #Nombre original del archivo.
