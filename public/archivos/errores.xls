@@ -99,3 +99,23 @@ Linea	Numero	Nombre	Observacion
 20	6000.0		Numero fuera de rango
 21	5181310.0		Numero fuera de rango
 22	(0424)123456.7		Contacto existe en la BD
+
+Archivo de errores 
+2017-08-19 14:26:23 -0400
+libro11.xls
+Linea	Numero	Nombre	Observacion
+1	12345.0	rafael	Numero fuera de rango
+2	23456.0		Numero fuera de rango
+3	3456.56	mariua	Numero fuera de rango
+4	cassa	212121212.0	Numero fuera de rango
+7		xxx	Numero fuera de rango
+8	123.0	dd	Numero fuera de rango
+9	(0414)123-123.1234		Numero fuera de rango
+14	3.6		Numero fuera de rango
+15	4321234567.0		Numero fuera de rango
+16	(0421)1234567		codigo de area incorrecto
+17	3.0		Numero fuera de rango
+18	60.0		Numero fuera de rango
+19	600.0		Numero fuera de rango
+20	6000.0		Numero fuera de rango
+21	5181310.0		Numero fuera de rango

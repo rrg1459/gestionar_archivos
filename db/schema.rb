@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170818163413) do
+ActiveRecord::Schema.define(version: 20170819181923) do
 
   create_table "contactos", force: :cascade do |t|
     t.string "numero"
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "archivos"
+    t.string "archivo", default: "en linea"
   end
 
 end

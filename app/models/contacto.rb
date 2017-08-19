@@ -61,8 +61,10 @@ class Contacto < ApplicationRecord
                       mensaje = 'Contacto existe en la BD'
                     else
                       @contacto=Contacto.new
-                      @contacto.numero = numero
-                      @contacto.nombre = nombre 
+                      @contacto.numero  = numero
+                      @contacto.nombre  = nombre 
+                      @contacto.archivo = file_path.original_filename
+
                       @contacto.save         
                     end
                   else

@@ -14,3 +14,13 @@ w+ - Create an empty file for both reading and writing.
 a+ - Open a file for reading and appending. The file is created if it does not exist.
 
 In your case, w is preferable.
+
+rails generate migration AddCommentsToArticles comments:string 
+rails generate migration RemoveCommentsFromArticles commens:string
+
+rails generate migration AddArchivoToContactos archivo:string 
+rails generate migration RemoveArchivosFromcontactos archivos:string
+
+
+
+
