@@ -1,6 +1,101 @@
 
 Archivo de errores 
-2017-08-19 07:38:51 -0400
+2017-08-19 10:12:12 -0400
 libro11.xls
-4	cassa	212121212.0
-7		xxx
+Linea	Numero	Nombre	Observacion
+1	12345.0	rafael	Numero fuera de rango
+2	23456.0		Numero fuera de rango
+3	3456.56	mariua	Numero fuera de rango
+4	cassa	212121212.0	Numero fuera de rango
+5	4165181317.0	rafael	Contacto existe en la BD
+6	4121234567.0	oscar	Contacto existe en la BD
+7		xxx	Numero fuera de rango
+8	123.0	dd	Numero fuera de rango
+9	(0414)123-123.1234		Numero fuera de rango
+10	(0414)518.1234		Contacto existe en la BD
+11	0424 8909876		Contacto existe en la BD
+12	4161234567.0		Contacto existe en la BD
+13	(0426)123-1234		Contacto existe en la BD
+14	3.6		Numero fuera de rango
+15	4321234567.0		Numero fuera de rango
+16	(0421)1234567		codigo de area incorrecto
+17	3.0		Numero fuera de rango
+18	60.0		Numero fuera de rango
+19	600.0		Numero fuera de rango
+20	6000.0		Numero fuera de rango
+21	5181310.0		Numero fuera de rango
+22	(0424)123456.7		Contacto existe en la BD
+
+Archivo de errores 
+2017-08-19 10:13:34 -0400
+libro11.xls
+Linea	Numero	Nombre	Observacion
+1	12345.0	rafael	Numero fuera de rango
+2	23456.0		Numero fuera de rango
+3	3456.56	mariua	Numero fuera de rango
+4	cassa	212121212.0	Numero fuera de rango
+7		xxx	Numero fuera de rango
+8	123.0	dd	Numero fuera de rango
+9	(0414)123-123.1234		Numero fuera de rango
+14	3.6		Numero fuera de rango
+15	4321234567.0		Numero fuera de rango
+16	(0421)1234567		codigo de area incorrecto
+17	3.0		Numero fuera de rango
+18	60.0		Numero fuera de rango
+19	600.0		Numero fuera de rango
+20	6000.0		Numero fuera de rango
+21	5181310.0		Numero fuera de rango
+
+Archivo de errores 
+2017-08-19 10:14:12 -0400
+libro11.xls
+Linea	Numero	Nombre	Observacion
+1	12345.0	rafael	Numero fuera de rango
+2	23456.0		Numero fuera de rango
+3	3456.56	mariua	Numero fuera de rango
+4	cassa	212121212.0	Numero fuera de rango
+5	4165181317.0	rafael	Contacto existe en la BD
+6	4121234567.0	oscar	Contacto existe en la BD
+7		xxx	Numero fuera de rango
+8	123.0	dd	Numero fuera de rango
+9	(0414)123-123.1234		Numero fuera de rango
+10	(0414)518.1234		Contacto existe en la BD
+11	0424 8909876		Contacto existe en la BD
+12	4161234567.0		Contacto existe en la BD
+13	(0426)123-1234		Contacto existe en la BD
+14	3.6		Numero fuera de rango
+15	4321234567.0		Numero fuera de rango
+16	(0421)1234567		codigo de area incorrecto
+17	3.0		Numero fuera de rango
+18	60.0		Numero fuera de rango
+19	600.0		Numero fuera de rango
+20	6000.0		Numero fuera de rango
+21	5181310.0		Numero fuera de rango
+22	(0424)123456.7		Contacto existe en la BD
+
+Archivo de errores 
+2017-08-19 10:15:38 -0400
+libro11.xls
+Linea	Numero	Nombre	Observacion
+1	12345.0	rafael	Numero fuera de rango
+2	23456.0		Numero fuera de rango
+3	3456.56	mariua	Numero fuera de rango
+4	cassa	212121212.0	Numero fuera de rango
+5	4165181317.0	rafael	Contacto existe en la BD
+6	4121234567.0	oscar	Contacto existe en la BD
+7		xxx	Numero fuera de rango
+8	123.0	dd	Numero fuera de rango
+9	(0414)123-123.1234		Numero fuera de rango
+10	(0414)518.1234		Contacto existe en la BD
+11	0424 8909876		Contacto existe en la BD
+12	4161234567.0		Contacto existe en la BD
+13	(0426)123-1234		Contacto existe en la BD
+14	3.6		Numero fuera de rango
+15	4321234567.0		Numero fuera de rango
+16	(0421)1234567		codigo de area incorrecto
+17	3.0		Numero fuera de rango
+18	60.0		Numero fuera de rango
+19	600.0		Numero fuera de rango
+20	6000.0		Numero fuera de rango
+21	5181310.0		Numero fuera de rango
+22	(0424)123456.7		Contacto existe en la BD

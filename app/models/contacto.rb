@@ -18,7 +18,7 @@ class Contacto < ApplicationRecord
   	file = open_file(file_path)
   	# Leer archivo
 #       File.open("public/archivos/errores.txt", "wb"){|f|;
-      File.open("public/archivos/errores.xls", "wb"){|f|;
+      File.open("public/archivos/errores.xls", "a+"){|f|;
           f.write("\n");
           f.write("Archivo de errores ");
           f.write("\n");
@@ -26,10 +26,19 @@ class Contacto < ApplicationRecord
           f.write("\n");
           f.write(file_path.original_filename);
           f.write("\n");
+          f.write("Linea");
+          f.write("\t");
+          f.write("Numero");
+          f.write("\t");
+          f.write("Nombre");
+          f.write("\t");
+          f.write("Observacion");
+          f.write("\n");
         	(1..file.last_row).each do |i|
         		fila = file.row(i)
 
 #           puts "#{i}\t#{fila[0]}\t#{fila[1]}"
+    error = false
 
                 #Escribe el contenido del archivo.
                 numero = fila[0].to_s
@@ -39,25 +48,54 @@ class Contacto < ApplicationRecord
                   numero = numero.to_i / 10
                 end
 
+                    puts "--antes--> #{numero}"
+                    puts numero.inspect
 
 #............................................................
-                if numero.to_i > 0
-                  # escribir en la base de datos
- #                puts "--in---> #{numero}"
-                  @contacto=Contacto.new
-                  @contacto.numero = numero.to_i 
-                  @contacto.nombre = nombre 
-                  @contacto.save 
+                if numero.to_i > 4120100000 && numero.to_i < 4269999999
+                  numero = numero.to_i
+                  area = numero.to_s[0,3]
+                  if area == '412' || area == '414' || area == '424' || area == '416' || area == '426'
+                    # escribir en la base de datos
+                    # falta validar existencia en la BD, el codigo va  aqui
+#                   puts "--in---> #{numero}"
+
+
+      if Contacto.exists?(numero: numero)
+        error = true
+        mensaje = 'Contacto existe en la BD'
+      else
+        @contacto=Contacto.new
+        @contacto.numero = numero
+        @contacto.nombre = nombre 
+        @contacto.save         
+      end
+
+
+
+
+                  else
+                    # escribiren el archivo de errores
+#                    puts "--out--> #{fila[0]}"
+                    error = true
+                    mensaje = 'codigo de area incorrecto'
+                  end 
                 else
-                  # escribiren el archivo de errores
-  #               puts "--out--> #{fila[0]}"
+                  error = true
+                  mensaje = 'Numero fuera de rango'
+                end 
+
+                if error
+#                 puts "--error--> #{fila[0]} --- #{mensaje}"
                   f.write(i);
                   f.write("\t");
                   f.write(fila[0]);
                   f.write("\t");
                   f.write(nombre);
+                  f.write("\t");
+                  f.write(mensaje);
                   f.write("\n");
-                end 
+                end
 #............................................................
 
 
