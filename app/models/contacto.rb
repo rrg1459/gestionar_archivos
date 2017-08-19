@@ -48,34 +48,24 @@ class Contacto < ApplicationRecord
                   numero = numero.to_i / 10
                 end
 
-                    puts "--antes--> #{numero}"
-                    puts numero.inspect
+#                   puts "--antes--> #{numero}"
+#                   puts numero.inspect
 
 #............................................................
                 if numero.to_i > 4120100000 && numero.to_i < 4269999999
                   numero = numero.to_i
                   area = numero.to_s[0,3]
                   if area == '412' || area == '414' || area == '424' || area == '416' || area == '426'
-                    # escribir en la base de datos
-                    # falta validar existencia en la BD, el codigo va  aqui
-#                   puts "--in---> #{numero}"
-
-
-      if Contacto.exists?(numero: numero)
-        error = true
-        mensaje = 'Contacto existe en la BD'
-      else
-        @contacto=Contacto.new
-        @contacto.numero = numero
-        @contacto.nombre = nombre 
-        @contacto.save         
-      end
-
-
-
-
+                    if Contacto.exists?(numero: numero)
+                      error = true
+                      mensaje = 'Contacto existe en la BD'
+                    else
+                      @contacto=Contacto.new
+                      @contacto.numero = numero
+                      @contacto.nombre = nombre 
+                      @contacto.save         
+                    end
                   else
-                    # escribiren el archivo de errores
 #                    puts "--out--> #{fila[0]}"
                     error = true
                     mensaje = 'codigo de area incorrecto'
