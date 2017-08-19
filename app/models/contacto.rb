@@ -41,14 +41,14 @@ class Contacto < ApplicationRecord
 
 
 #............................................................
-#                if numero.to_i > 0
+                if numero.to_i > 0
                   # escribir en la base de datos
  #                puts "--in---> #{numero}"
-#                  @contacto=Contacto.new
-#                  @contacto.numero = numero.to_i 
-#                  @contacto.nombre = nombre 
-#                  @contacto.save 
-#                else
+                  @contacto=Contacto.new
+                  @contacto.numero = numero.to_i 
+                  @contacto.nombre = nombre 
+                  @contacto.save 
+                else
                   # escribiren el archivo de errores
   #               puts "--out--> #{fila[0]}"
                   f.write(i);
@@ -57,7 +57,7 @@ class Contacto < ApplicationRecord
                   f.write("\t");
                   f.write(nombre);
                   f.write("\n");
-#                end 
+                end 
 #............................................................
 
 
